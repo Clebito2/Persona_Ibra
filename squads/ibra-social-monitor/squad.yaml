@@ -1,0 +1,30 @@
+bundle:
+  name: Ibrahim Social Monitor
+  id: ibra-social-monitor
+  icon: 📱
+  description: Specialized squad for monitoring social media, analyzing comments, and generating responses aligned with Ibrahim Boufleur's persona.
+
+agents:
+  - analyst
+  - ux-design-expert
+  - ibra-context-specialist
+  - ibra-responder
+  - ibra-validator
+
+workflows:
+  - social-response-workflow.yaml
+
+tasks:
+  - analyze-comment.md
+  - validate-response.md
+
+purpose: |
+  This squad manages social media presence by:
+  1. Triaging posts and comments.
+  2. Evaluating alignment with Ibrahim's persona and ideology.
+  3. Crafting concise, rational responses.
+
+when_to_use:
+  - When analyzing new comments on Instagram, LinkedIn, or Twitter/X.
+  - When a link to a post is provided for full engagement analysis.
+  - To maintain a consistent "Estilo Ibrahim" in public debates.

@@ -1,0 +1,34 @@
+name: Social Response Workflow
+id: social-response-workflow
+description: Coordinates the analysis and response to a social media comment in the style of Ibrahim Boufleur.
+
+steps:
+  - name: Deep Content Extraction
+    agent: analyst
+    task: analyze-comment.md
+    description: Fetches content from link and analyzes deep intent/micro-sentiment.
+
+  - name: Visual Identity Profiling
+    agent: ux-design-expert
+    description: Analyzes the profile image and visual cues of the commenter.
+    instructions: |
+      Examine the profile photo and visual metadata provided by the Screener/Analyst.
+      Describe professional status, estimated age group, and any visible ideological symbols.
+
+  - name: Ideological Alignment
+    agent: ibra-context-specialist
+    description: Evaluates the comment against Ibrahim's pillars.
+
+  - name: Response Drafting
+    agent: ibra-responder
+    description: Generates the final 3-line response.
+
+  - name: Quality Validation
+    agent: ibra-validator
+    task: validate-response.md
+    description: Final check for persona adherence and length constraints.
+
+artifacts:
+  - name: suggested_response.md
+    type: suggestion
+    description: The final suggested response for the social media post.
